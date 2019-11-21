@@ -1,3 +1,4 @@
+
 function Snake() {
     this.x = 0;
     this.y = 0;
@@ -86,6 +87,26 @@ function Snake() {
                 this.ySpeed = 0;
                 break;
         }
+    }
+    this.changeDirectionUp = function() {
+        this.xSpeed = 0;
+        this.ySpeed = -scale * 1;
+        // break;
+    }
+    this.changeDirectionDown = function() {
+        this.xSpeed = 0;
+        this.ySpeed = scale * 1;
+        // break;
+    }
+    this.changeDirectionLeft = function() {
+        this.xSpeed = -scale * 1;
+        this.ySpeed = 0;
+        // break;
+    }
+    this.changeDirectionRight = function() {
+        this.xSpeed = scale * 1;
+        this.ySpeed = 0;
+        // break;
     }
 
     this.eat = function(fruit){

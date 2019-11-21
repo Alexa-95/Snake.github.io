@@ -13,6 +13,11 @@ body{
     margin: 0;
     font-family: "Digital-7";
     text-align: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .gameboy{
@@ -29,13 +34,13 @@ body{
     margin: 40px 20px 0;
     background-color: #3c3c3c;
     border: 20px inset #727272;
-  background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
-  background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
-  background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
-  background-image: repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
-  -webkit-background-size: 3px 3px;
-  -moz-background-size: 3px 3px;
-  background-size: 3px 3px;
+    background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+    background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+    background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+    background-image: repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+    -webkit-background-size: 3px 3px;
+    -moz-background-size: 3px 3px;
+    background-size: 3px 3px;
 }
 
 .gameboy .totalScore{
@@ -58,13 +63,51 @@ body{
 }
 
 .gameboy .controls .cross{
-    width: 100px;
-    height: 100px;
+    color: #fff;
+    font-size: 25px;
+    line-height: normal;
+    width: 120px;
+    height: 120px;
     position: relative;
-    margin: 10px 40px;
+    margin: 10px 25px;
     background: #2A2A2A;
     border: 5px outset #3A3A3A;
     clip-path: polygon(0 35%, 35% 36%, 35% 0, 65% 0%, 65% 35%, 100% 35%, 100% 65%, 65% 65%, 65% 100%, 35% 100%, 35% 65%, 0 65%);
+}
+.gameboy .controls .cross .up,
+.gameboy .controls .cross .down,
+.gameboy .controls .cross .left,
+.gameboy .controls .cross .right{
+    cursor: pointer;
+    
+}
+.gameboy .controls .cross .up:active,
+.gameboy .controls .cross .down:active,
+.gameboy .controls .cross .left:active,
+.gameboy .controls .cross .right:active{
+    color: rgb(180, 180, 180);
+    text-shadow: 3px 2px 3px rgba(146, 146, 146, 0.2);
+    
+}
+.gameboy .controls .cross .up{
+    position: absolute;
+    top: 0;
+    left: calc(50% - 11px);
+}
+.gameboy .controls .cross .down{
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 11px);
+}
+.gameboy .controls .cross .left{
+    position: absolute;
+    left: 0;
+    top: calc(50% - 18px);
+}
+.gameboy .controls .cross .right{
+    position: absolute;
+    right: 0;
+    top: calc(50% - 18px);
 }
 .gameboy .controls .buttonA{
     width: 50px;
@@ -79,7 +122,7 @@ body{
     height: 50px;
     border-radius: 30px;
     background-color: #2A2A2A;
-    margin-right: 40px;
+    margin-right: 25px;
     border: 2px outset #3A3A3A;
 }
 
@@ -98,4 +141,10 @@ body{
     border: 2px outset #3A3A3A;
     border-radius: 5px;
     margin: 10px;
+}
+
+@media(max-width: 560px){
+    .gameboy .totalScore{
+        font-size: 54px;
+    }    
 }
