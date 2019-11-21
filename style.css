@@ -1,0 +1,101 @@
+
+@font-face {
+    font-family: "Digital-7";
+    src: url("digital-7.ttf");
+    }
+
+body{
+    background-image: url("https://t3.ftcdn.net/jpg/02/49/72/24/240_F_249722435_QmNFUKX59yA7W7CCeE4RDSQv1pKKv10C.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 100vh;
+    background-position-x: center;
+    background-color: #371a4a;
+    margin: 0;
+    font-family: "Digital-7";
+    text-align: center;
+}
+
+.gameboy{
+    width: 380px;
+    height: 800px;
+    background-color: #189DA2;
+    margin: 3vw auto 0;
+    border: 10px outset rgb(24, 134, 138);
+    border-radius: 20px;
+    position: relative;
+}
+
+.gameboy .canvas{
+    margin: 40px 20px 0;
+    background-color: #3c3c3c;
+    border: 20px inset #727272;
+  background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+  background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+  background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+  background-image: repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+  -webkit-background-size: 3px 3px;
+  -moz-background-size: 3px 3px;
+  background-size: 3px 3px;
+}
+
+.gameboy .totalScore{
+    width: 80px;
+    text-align: center;
+    margin: 20px auto;
+    font-size: 64px;
+    color: #7BBE00;
+    background: black;
+    padding: 2px 15px 2px 25px;
+    letter-spacing: 10px;
+    border: 4px inset rgb(24, 134, 138);
+}
+
+.gameboy .controls{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.gameboy .controls .cross{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: 10px 40px;
+    background: #2A2A2A;
+    border: 5px outset #3A3A3A;
+    clip-path: polygon(0 35%, 35% 36%, 35% 0, 65% 0%, 65% 35%, 100% 35%, 100% 65%, 65% 65%, 65% 100%, 35% 100%, 35% 65%, 0 65%);
+}
+.gameboy .controls .buttonA{
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: #2A2A2A;
+    margin-top: 50px;
+    border: 2px outset #3A3A3A;
+}
+.gameboy .controls .buttonB{
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: #2A2A2A;
+    margin-right: 40px;
+    border: 2px outset #3A3A3A;
+}
+
+.gameboy .controlsSmall{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 150px;
+    margin: 65px auto;
+}
+
+.gameboy .controlsSmall .itemA, .gameboy .controlsSmall .itemB{
+    width: 50px;
+    height: 10px;
+    background-color: #2A2A2A;
+    border: 2px outset #3A3A3A;
+    border-radius: 5px;
+    margin: 10px;
+}
