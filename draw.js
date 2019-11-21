@@ -12,6 +12,19 @@ var rightClick = document.querySelector('.right');
 
 var snake;
 
+upClick.addEventListener('click', ((event) =>{
+    snake.changeDirectionUp(event);
+}));
+downClick.addEventListener('click', ((event) =>{
+    snake.changeDirectionDown(event);
+}));
+leftClick.addEventListener('click', ((event) =>{
+    snake.changeDirectionLeft(event);
+}));
+rightClick.addEventListener('click', ((event) =>{
+    snake.changeDirectionRight(event);
+}));
+
 (function setup(){
     snake = new Snake;
     fruit = new Fruit();
@@ -39,16 +52,4 @@ window.addEventListener('keydown', ((evt) =>{
     const direction = evt.key.replace('Arrow', '');
     // console.log(direction);
     snake.changeDirection(direction);
-}));
-upClick.addEventListener('click', ((event) =>{
-    snake.changeDirectionUp(event);
-}));
-downClick.addEventListener('click', ((event) =>{
-    snake.changeDirectionDown(event);
-}));
-leftClick.addEventListener('click', ((event) =>{
-    snake.changeDirectionLeft(event);
-}));
-rightClick.addEventListener('click', ((event) =>{
-    snake.changeDirectionRight(event);
 }));
