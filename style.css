@@ -163,5 +163,9 @@ body{
     .gameboy .totalScore{
         font-size: 54px;
         line-height: 64px;
+    }
+    .gameboy .controls .cross {
+        width: 150px;
+        height: 150px;
     }    
 }
