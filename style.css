@@ -79,35 +79,48 @@ body{
 .gameboy .controls .cross .left,
 .gameboy .controls .cross .right{
     cursor: pointer;
+    background-color: #717171;
     
 }
 .gameboy .controls .cross .up:active,
 .gameboy .controls .cross .down:active,
 .gameboy .controls .cross .left:active,
 .gameboy .controls .cross .right:active{
-    color: rgb(180, 180, 180);
+    background-color: rgb(180, 180, 180);
     text-shadow: 3px 2px 3px rgba(146, 146, 146, 0.2);
     
 }
 .gameboy .controls .cross .up{
     position: absolute;
     top: 0;
-    left: calc(50% - 11px);
+    left: calc(50% - 15px);
+    height: 30px;
+    width: 30px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 .gameboy .controls .cross .down{
     position: absolute;
     bottom: 0;
-    left: calc(50% - 11px);
+    left: calc(50% - 15px);
+    height: 30px;
+    width: 30px;
+    clip-path: polygon(100% 0, 0 0, 50% 100%);
 }
 .gameboy .controls .cross .left{
     position: absolute;
     left: 0;
-    top: calc(50% - 18px);
+    top: calc(50% - 15px);
+    width: 30px;
+    height: 30px;
+    clip-path: polygon(100% 0, 0 50%, 100% 100%);
 }
 .gameboy .controls .cross .right{
     position: absolute;
     right: 0;
-    top: calc(50% - 18px);
+    top: calc(50% - 15px);
+    width: 30px;
+    height: 30px;
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
 }
 .gameboy .controls .buttonA{
     width: 50px;
@@ -131,7 +144,9 @@ body{
     justify-content: center;
     align-content: center;
     width: 150px;
-    margin: 65px auto;
+    position: absolute;
+    bottom: 20px;
+    left: 105px;
 }
 
 .gameboy .controlsSmall .itemA, .gameboy .controlsSmall .itemB{
