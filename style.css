@@ -48,6 +48,7 @@ body{
     text-align: center;
     margin: 20px auto;
     font-size: 64px;
+    line-height: 72px;
     color: #7BBE00;
     background: black;
     padding: 2px 15px 2px 25px;
@@ -161,5 +162,6 @@ body{
 @media(max-width: 560px){
     .gameboy .totalScore{
         font-size: 54px;
+        line-height: 64px;
     }    
 }
