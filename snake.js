@@ -8,19 +8,6 @@ function Snake() {
     this.tail = [];
     var totalScore = document.querySelector('.totalScore');
 
-    // this.reset = function() {
-        
-    //     for(let i=0; i<this.tail.length - 1; i++){
-    //         if(this.x === this.tail[i].x && this.y === this.tail[i].y){
-    //             this.total = 0;
-    //             totalScore.textContent = "0" + this.total;
-    //             this.tail[i] = 0;
-    //             i = 0;
-    //             console.log("EAT");
-    //             break;
-    //         }
-    //     }
-    // }
     this.draw = function() {
         ctx.fillStyle = '#FFFFFF';
         
@@ -32,6 +19,7 @@ function Snake() {
                 i = -1;
                 this.x = 0;
                 this.y = 0;
+                time = 250;
                 console.log(this.tail.length);
                 break;
             }
@@ -45,7 +33,7 @@ function Snake() {
         for(let i=0; i<this.tail.length - 1; i++){
             this.tail[i] = this.tail[i+1];
 
-            console.log(this.tail.length);
+            // console.log(this.tail.length);
 
         }
         this.tail[this.total - 1] = {x: this.x, y: this.y};
@@ -143,12 +131,4 @@ function Snake() {
             return true;
         }
     }
-    // this.kanibalizm = function(){
-    //     for(let i=0; i<this.tail.length; i++){
-    //         if(this.x === this.tail[i].x && this.y === this.tail[i].y){
-    //             this.total = 0;
-    //         }
-    //     }
-    //     return true;
-    // }
 }
