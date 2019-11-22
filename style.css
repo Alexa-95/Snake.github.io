@@ -93,35 +93,35 @@ body{
 }
 .gameboy .controls .cross .up{
     position: absolute;
-    top: 0;
-    left: calc(50% - 15px);
-    height: 30px;
-    width: 30px;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    top: -5px;
+    left: calc(50% - 25px);
+    height: 50px;
+    width: 50px;
+    clip-path: polygon(50% 15%, 15% 100%, 85% 100%);
 }
 .gameboy .controls .cross .down{
     position: absolute;
-    bottom: 0;
-    left: calc(50% - 15px);
-    height: 30px;
-    width: 30px;
-    clip-path: polygon(100% 0, 0 0, 50% 100%);
+    bottom: -5px;
+    left: calc(50% - 25px);
+    height: 50px;
+    width: 50px;
+    clip-path: polygon(85% 0, 15% 0, 50% 85%);
 }
 .gameboy .controls .cross .left{
     position: absolute;
-    left: 0;
-    top: calc(50% - 15px);
-    width: 30px;
-    height: 30px;
-    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+    left: -5px;
+    top: calc(50% - 25px);
+    width: 50px;
+    height: 50px;
+    clip-path: polygon(100% 15%, 15% 50%, 100% 85%)
 }
 .gameboy .controls .cross .right{
     position: absolute;
-    right: 0;
-    top: calc(50% - 15px);
-    width: 30px;
-    height: 30px;
-    clip-path: polygon(100% 50%, 0 0, 0 100%);
+    right: -5px;
+    top: calc(50% - 25px);
+    width: 50px;
+    height: 50px;
+    clip-path: polygon(85% 50%, 0 15%, 0 85%);
 }
 .gameboy .controls .buttonA{
     width: 50px;

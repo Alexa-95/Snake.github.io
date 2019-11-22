@@ -12,6 +12,19 @@ var rightClick = document.querySelector('.right');
 
 var snake;
 
+upClick.addEventListener('touchstart', ((event) =>{
+    snake.changeDirectionUp(event);
+}));
+downClick.addEventListener('touchstart', ((event) =>{
+    snake.changeDirectionDown(event);
+}));
+leftClick.addEventListener('touchstart', ((event) =>{
+    snake.changeDirectionLeft(event);
+}));
+rightClick.addEventListener('touchstart', ((event) =>{
+    snake.changeDirectionRight(event);
+}));
+
 upClick.addEventListener('click', ((event) =>{
     snake.changeDirectionUp(event);
 }));
