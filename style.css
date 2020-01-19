@@ -31,7 +31,7 @@ body{
 }
 
 .gameboy .canvas{
-    margin: 40px 20px 0;
+    margin: 40px auto 0;
     background-color: #3c3c3c;
     border: 20px inset #727272;
     background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
@@ -160,6 +160,11 @@ body{
 }
 
 @media(max-width: 560px){
+    .gameboy{
+        width: calc(100vw - 20px);
+        height: calc(100vh - 20px);
+        margin: 0;
+    }
     .gameboy .totalScore{
         font-size: 54px;
         line-height: 64px;
@@ -167,5 +172,26 @@ body{
     .gameboy .controls .cross {
         width: 150px;
         height: 150px;
-    }    
+    } 
+    .gameboy .controlsSmall{
+        display: none;
+    }   
+}
+
+@media(max-width: 360px){
+    .gameboy{
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+
+    .gameboy .canvas{
+        border: 5px inset #727272;
+    }
+
+    .gameboy .totalScore{
+        margin: 10px auto;
+    }
 }
